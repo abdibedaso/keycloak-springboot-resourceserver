@@ -8,3 +8,7 @@ spring:
         jwt:
           jwk-set-uri: http://localhost:8083/auth/realms/demo/protocol/openid-connect/certs
 
+###### Define Swagger Configuration Properties
+swagger:
+  host:
+    url: http://localhost:8089
