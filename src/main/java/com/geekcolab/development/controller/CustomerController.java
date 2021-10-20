@@ -1,5 +1,6 @@
 package com.geekcolab.development.controller;
 
+import com.github.piomin.springboot.istio.annotation.EnableIstio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(value = "/customer")
+@EnableIstio(version = "v1", timeout = 3, numberOfRetries = 3)
 public class CustomerController {
 
 	@PreAuthorize("hasRole('CUSTOMER')")
